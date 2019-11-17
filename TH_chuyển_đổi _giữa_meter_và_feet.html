@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" onchange="feetToMetter(this.value)" oninput="feetToMetter(this.value)" id = 'fttom'><b>    Feet to Metter</b>
+    <p>Result is : <span id = 'rs1'></span></p>
+    <br>
+    <input type="number" onchange="metterToFeet(this.value)" oninput="metterToFeet(this.value)" id = 'mtoft'><b>   Metter to Feet</b>
+    <p>Result is : <span id = 'rs2'></span></p>
+    <script>
+        function feetToMetter(feet){
+            feet=parseFloat(feet);
+            metter = 0.305 * feet;
+            // return metter;
+            document.getElementById('rs1').innerHTML = metter;
+        }
+
+        function metterToFeet(metter){
+            metter = parseFloat (metter);
+            feet = 3.279 * metter;
+            // return feet;
+            document.getElementById('rs2').innerHTML = feet;
+        }
+    </script>
+</body>
+</html>
